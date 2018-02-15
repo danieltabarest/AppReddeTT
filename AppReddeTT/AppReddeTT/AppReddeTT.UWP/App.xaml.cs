@@ -7,13 +7,17 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using AppReddeTT.UWP.Extensions;
+using Xamarin.Forms;
+using Application = Windows.UI.Xaml.Application;
+using Frame = Windows.UI.Xaml.Controls.Frame;
 
 namespace AppReddeTT.UWP
 {
@@ -30,6 +34,8 @@ namespace AppReddeTT.UWP
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+            
+            ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.FullScreen;
         }
 
         /// <summary>
@@ -39,7 +45,13 @@ namespace AppReddeTT.UWP
         /// <param name="e">Details about the launch request and process.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
-
+            
+#if DEBUG
+            if (System.Diagnostics.Debugger.IsAttached)
+            {
+                this.DebugSettings.EnableFrameRateCounter = true;
+            }
+#endif
 
             Frame rootFrame = Window.Current.Content as Frame;
 
@@ -68,10 +80,16 @@ namespace AppReddeTT.UWP
                 // When the navigation stack isn't restored navigate to the first page,
                 // configuring the new page by passing required information as a navigation
                 // parameter
+                
+                // Listview selection color override
+                //Current.Resources["ListViewItemSelectedBackgroundThemeBrush"] = new SolidColorBrush(((Color)Xamarin.Forms.Application.Current.Resources["AccentColor"]).ToUWPColor());
+
                 rootFrame.Navigate(typeof(MainPage), e.Arguments);
             }
             // Ensure the current window is active
             Window.Current.Activate();
+
+            
         }
 
         /// <summary>

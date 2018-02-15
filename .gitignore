@@ -286,3 +286,13 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
+/AppReddeTT/AppReddeTT/AppReddeTT/ViewModels
+/AppReddeTT/AppReddeTT/AppReddeTT/Services
+/AppReddeTT/AppReddeTT/AppReddeTT/Navigation
+/AppReddeTT/AppReddeTT/AppReddeTT/Models
+/AppReddeTT/AppReddeTT/AppReddeTT/Helpers
+/AppReddeTT/AppReddeTT/AppReddeTT/Extensions
+/AppReddeTT/AppReddeTT/AppReddeTT/Converters
+/AppReddeTT/AppReddeTT/AppReddeTT/Controls
+/AppReddeTT/AppReddeTT/AppReddeTT/Cells
+/AppReddeTT/AppReddeTT/AppReddeTT/Behaviors

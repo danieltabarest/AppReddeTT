@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="AppReddeTT.Views.PostsPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behaviors="clr-namespace:AppReddeTT.Behaviors;assembly=AppReddeTT"
+             xmlns:cells="clr-namespace:AppReddeTT.Cells;assembly=AppReddeTT"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             Title="AppReddeTT"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             BackgroundColor="{StaticResource PageBackgroundColor}">
+    <Grid>
+        <ActivityIndicator HeightRequest="40"
+                           HorizontalOptions="Center"
+                           IsRunning="True"
+                           IsVisible="{Binding IsLoading}"
+                           VerticalOptions="Center"
+                           Color="{StaticResource AccentColor}" />
+
+        <ListView BackgroundColor="{StaticResource PageBackgroundColor}"
+                  HasUnevenRows="True"
+                  ItemSelected="ListView_OnItemSelected"
+                  ItemsSource="{Binding Posts}"
+                  SeparatorColor="{StaticResource MainMenuBackgroundColor}"
+                  SeparatorVisibility="Default">
+            <ListView.Behaviors>
+                <behaviors:EventToCommandBehavior Command="{Binding ShowPostDetailCommand}"
+                                                  Converter="{StaticResource ItemTappedConverter}"
+                                                  EventName="ItemTapped" />
+            </ListView.Behaviors>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <cells:PostCell />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</ContentPage>

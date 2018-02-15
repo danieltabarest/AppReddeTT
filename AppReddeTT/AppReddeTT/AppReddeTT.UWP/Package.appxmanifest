@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="ec0cc741-fd3e-485c-81be-68815c480690"
-    Publisher="CN=Pierce Boggan"
+    Name="dc459332-e338-4060-96e3-10a3a352222d"
+    Publisher="CN=Francesco"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="ec0cc741-fd3e-485c-81be-68815c480690" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="dc459332-e338-4060-96e3-10a3a352222d" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>AppReddeTT.UWP</DisplayName>
-    <PublisherDisplayName>Pierce Boggan</PublisherDisplayName>
+    <PublisherDisplayName>Francesco</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 

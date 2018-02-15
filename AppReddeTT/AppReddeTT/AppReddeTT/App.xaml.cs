@@ -1,34 +1,37 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+﻿//using AppReddeTT.Services;
+using Microsoft.Practices.Unity;
+using AppReddeTT.Navigation;
+using AppReddeTT.Services;
+using AppReddeTT.Views;
+using Prism.Unity;
 using Xamarin.Forms;
 
 namespace AppReddeTT
 {
-	public partial class App : Application
-	{
-		public App ()
-		{
-			InitializeComponent();
+    public partial class App : PrismApplication
+    {
+        public App(IPlatformInitializer initializer = null) : base(initializer) { }
 
-			MainPage = new AppReddeTT.MainPage();
-		}
+        protected override async void OnInitialized()
+        {
+            InitializeComponent();
+            await
+                NavigationService.NavigateAsync(
+                    $"{PageTokens.RootMasterDetailPage}/{PageTokens.RootNavigationPage}/{PageTokens.PostsPage}",
+                    animated: false);
+            //NavigationService.NavigateAsync("MainPage");
+        }
 
-		protected override void OnStart ()
-		{
-			// Handle when your app starts
-		}
+        protected override void RegisterTypes()
+        {
+            Container.RegisterType<IRedditApiSource, RedditApiSource>();
 
-		protected override void OnSleep ()
-		{
-			// Handle when your app sleeps
-		}
-
-		protected override void OnResume ()
-		{
-			// Handle when your app resumes
-		}
-	}
+            Container.RegisterTypeForNavigation<RootMasterDetailPage>();
+            Container.RegisterTypeForNavigation<RootMasterDetailPage>();
+            Container.RegisterTypeForNavigation<RootNavigationPage>();
+            Container.RegisterTypeForNavigation<SubredditsMenuPage>();
+            Container.RegisterTypeForNavigation<PostsPage>();
+            Container.RegisterTypeForNavigation<PostDetailPage>();
+        }
+    }
 }
