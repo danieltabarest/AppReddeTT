@@ -30,8 +30,8 @@
                            VerticalTextAlignment="Start" />
 
                     <Label Style="{DynamicResource SubHeaderAppNameStyle}"
-                           Text="Another client for Reddit"
-                           TextColor="Red"
+                           Text="client Reddit"
+                           TextColor="Blue"
                            VerticalTextAlignment="Start" />
 
                 </StackLayout>

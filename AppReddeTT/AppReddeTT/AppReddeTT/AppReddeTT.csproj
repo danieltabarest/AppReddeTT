@@ -68,21 +68,6 @@
     <Compile Include="Models\Post.cs" />
     <Compile Include="Models\SubReddit.cs" />
     <Compile Include="Navigation\PageTokens.cs" />
-    <Compile Include="obj\Debug\AppReddeTT.App.xaml.g.cs" />
-    <Compile Include="obj\Debug\AppReddeTT.Cells.CommentCell.xaml.g.cs" />
-    <Compile Include="obj\Debug\AppReddeTT.Cells.MainMenuCell.xaml.g.cs" />
-    <Compile Include="obj\Debug\AppReddeTT.Cells.MainMenuGroupHeaderCell.xaml.g.cs" />
-    <Compile Include="obj\Debug\AppReddeTT.Cells.PostCell.xaml.g.cs" />
-    <Compile Include="obj\Debug\AppReddeTT.Controls.AppLogo.xaml.g.cs" />
-    <Compile Include="obj\Debug\AppReddeTT.Views.MainPage.xaml.g.cs" />
-    <Compile Include="obj\Debug\AppReddeTT.Views.PostDetailPage.xaml.g.cs" />
-    <Compile Include="obj\Debug\AppReddeTT.Views.PostsPage.xaml.g.cs" />
-    <Compile Include="obj\Debug\AppReddeTT.Views.RootMasterDetailPage.xaml.g.cs" />
-    <Compile Include="obj\Debug\AppReddeTT.Views.RootNavigationPage.xaml.g.cs" />
-    <Compile Include="obj\Debug\AppReddeTT.Views.SubredditsMenuPage.xaml.g.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\IRedditApiSource.cs" />
     <Compile Include="Services\RedditApiSource.cs" />
@@ -120,16 +105,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="bin\Debug\AppReddeTT.dll.config" />
-    <None Include="bin\Debug\Prism.Unity.Forms.dll.config" />
     <None Include="GettingStarted.Xamarin" />
-    <None Include="obj\Debug\AppReddeTT.csproj.CopyComplete" />
-    <None Include="obj\Debug\AppReddeTT.csproj.CoreCompileInputs.cache" />
-    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
-    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <None Include="obj\Debug\myReddit.csproj.CopyComplete" />
-    <None Include="obj\Debug\myReddit.csproj.CoreCompileInputs.cache" />
-    <None Include="obj\Debug\myReddit.csprojResolveAssemblyReference.cache" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -175,70 +151,33 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Cells\CommentCell.xaml">
+    <EmbeddedResource Include="Controls\AppLogo.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Cells\MainMenuCell.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Cells\MainMenuGroupHeaderCell.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Cells\PostCell.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\AppLogo.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\MainPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Content Include="bin\Debug\AppReddeTT.dll" />
-    <Content Include="bin\Debug\AppReddeTT.dll.mdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="bin\Debug\AppReddeTT.pdb" />
-    <Content Include="bin\Debug\ImageCircle.Forms.Plugin.Abstractions.dll" />
-    <Content Include="bin\Debug\ImageCircle.Forms.Plugin.Abstractions.pdb" />
-    <Content Include="bin\Debug\ImageCircle.Forms.Plugin.Abstractions.xml" />
-    <Content Include="bin\Debug\Microsoft.Practices.ServiceLocation.dll" />
-    <Content Include="bin\Debug\Microsoft.Practices.ServiceLocation.pdb" />
-    <Content Include="bin\Debug\Microsoft.Practices.ServiceLocation.xml" />
-    <Content Include="bin\Debug\Microsoft.Practices.Unity.dll" />
-    <Content Include="bin\Debug\Microsoft.Practices.Unity.xml" />
-    <Content Include="bin\Debug\myReddit.dll.mdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="bin\Debug\Newtonsoft.Json.dll" />
-    <Content Include="bin\Debug\Newtonsoft.Json.xml" />
-    <Content Include="bin\Debug\Prism.dll" />
-    <Content Include="bin\Debug\Prism.Forms.dll" />
-    <Content Include="bin\Debug\Prism.Forms.xml" />
-    <Content Include="bin\Debug\Prism.Unity.Forms.dll" />
-    <Content Include="bin\Debug\Prism.Unity.Forms.xml" />
-    <Content Include="bin\Debug\Prism.xml" />
-    <Content Include="bin\Debug\Xamarin.Forms.Core.dll" />
-    <Content Include="bin\Debug\Xamarin.Forms.Core.pdb" />
-    <Content Include="bin\Debug\Xamarin.Forms.Core.xml" />
-    <Content Include="bin\Debug\Xamarin.Forms.Platform.dll" />
-    <Content Include="bin\Debug\Xamarin.Forms.Platform.pdb" />
-    <Content Include="bin\Debug\Xamarin.Forms.Xaml.dll" />
-    <Content Include="bin\Debug\Xamarin.Forms.Xaml.pdb" />
-    <Content Include="bin\Debug\Xamarin.Forms.Xaml.xml" />
-    <Content Include="obj\Debug\AppReddeTT.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Debug\AppReddeTT.dll" />
-    <Content Include="obj\Debug\AppReddeTT.pdb" />
-    <Content Include="obj\Debug\myReddit.csproj.FileListAbsolute.txt" />
-  </ItemGroup>
-  <ItemGroup>
+    <EmbeddedResource Include="Cells\CommentCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cells\MainMenuCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cells\MainMenuGroupHeaderCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cells\PostCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\PostDetailPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
@@ -259,10 +198,6 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="bin\Release\" />
-    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.3.2.127\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.2.127\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />

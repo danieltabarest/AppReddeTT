@@ -71,7 +71,7 @@ public class RootMasterDetailPageViewModel : BindableBase, INavigationAware
     {
         return new List<Grouping<string, Subreddit>>
         {
-            new Grouping<string, Subreddit>("SUBREDDITS", subReddits)
+            new Grouping<string, Subreddit>("Menu", subReddits)
         };
     }
 }
